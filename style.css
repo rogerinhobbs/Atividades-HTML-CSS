@@ -1,0 +1,74 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e905d6;
+    background-image: url(https://wallpapers.com/images/high/hidden-leaf-village-8nkx3ipvwp30qliw.webp);
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo para o contêiner principal da ficha */
+.ficha-container {
+    background-color: #1f0444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Estilo para a imagem do personagem */
+.personagem-foto {
+    width: 200px;
+    height: 157px;
+    border-radius: 100%; 
+    border: 3px solid #b205dd;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Estilos para os títulos */
+.personagem-nome {
+    color: #620cb2;
+    font-size: 2.5em;
+    margin: 10px 0 5px;
+}
+
+.personagem-titulo {
+    color: #ffffffd6;
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Estilo para a biografia */
+.ficha-bio p {
+    line-height: 1.6;
+    color: #ffffffb2;
+}
+
+/* Estilo para a lista de habilidades */
+.ficha-habilidades h3 {
+    margin-top: 20px;
+    color: #ffffff;
+    border-bottom: 2px solid #6a6363;
+    padding-bottom: 5px;
+}
+
+.ficha-habilidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ficha-habilidades li {
+    background-color: #c2c0c3;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+}
