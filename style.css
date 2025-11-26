@@ -1,74 +1,343 @@
-/* Estilo para o corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e905d6;
-    background-image: url(https://wallpapers.com/images/high/hidden-leaf-village-8nkx3ipvwp30qliw.webp);
-    background-size: cover;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* =========================================================
+   RESET / BASE
+========================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Variáveis de tema (claro) */
+:root{
+  --fundo: #ffffff;
+  --card: #f5f5f5;
+  --card-alt: #f9f9f9;
+  --texto: #222222;
+  --borda: #dddddd;
+  --primario: #1f8f28;
 }
 
-/* Estilo para o contêiner principal da ficha */
-.ficha-container {
-    background-color: #1f0444;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
-    max-width: 600px;
-    padding: 30px;
-    text-align: center;
+/* Tema escuro */
+.dark-mode{
+  --fundo: #0e0e0e;
+  --card: #151515;
+  --card-alt: #1a1a1a;
+  --texto: #e4e4e4;
+  --borda: #555;
+  --primario: #4caf50;
 }
 
-/* Estilo para a imagem do personagem */
-.personagem-foto {
-    width: 200px;
-    height: 157px;
-    border-radius: 100%; 
-    border: 3px solid #b205dd;
-    object-fit: cover;
-    margin-bottom: 15px;
+/* Corpo / fundo (suporta imagem de fundo) */
+body{
+  font-family: 'Poppins', sans-serif;
+  background: var(--fundo) url("img/fundo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--texto);
+  transition: background 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
 }
 
-/* Estilos para os títulos */
-.personagem-nome {
-    color: #620cb2;
-    font-size: 2.5em;
-    margin: 10px 0 5px;
+/* Fundo para modo escuro (se tiver imagem alternativa) */
+body.dark-mode{
+  background: #000 url("img/fundo-escuro.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
-.personagem-titulo {
-    color: #ffffffd6;
-    font-size: 1.2em;
-    font-style: italic;
-    margin: 0;
+/* =========================================================
+   BARRA DE NAVEGAÇÃO
+========================================================= */
+.barra-navegacao{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:var(--fundo);
+  border-bottom:1px solid var(--borda);
 }
 
-/* Estilo para a biografia */
-.ficha-bio p {
-    line-height: 1.6;
-    color: #ffffffb2;
+.logo img{
+  height:45px;
+  border-radius:8px;
 }
 
-/* Estilo para a lista de habilidades */
-.ficha-habilidades h3 {
-    margin-top: 20px;
-    color: #ffffff;
-    border-bottom: 2px solid #6a6363;
-    padding-bottom: 5px;
+.links-navegacao{
+  display:flex;
+  align-items:center;
+  gap:18px;
 }
 
-.ficha-habilidades ul {
-    list-style: none;
-    padding: 0;
+.links-navegacao a{
+  color:var(--texto);
+  text-decoration:none;
+  font-weight:500;
+  transition: color .25s;
 }
 
-.ficha-habilidades li {
-    background-color: #c2c0c3;
-    border: 1px solid #eee;
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 5px;
+.links-navegacao a:hover{ color:var(--primario); }
+
+/* Botão alternar tema */
+#alternar-tema{
+  cursor:pointer;
+  background:transparent;
+  border:none;
+  font-size:20px;
+  color:var(--texto);
+}
+
+/* =========================================================
+   PRINCIPAL (HERO)
+========================================================= */
+.principal{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 10%;
+  background:var(--card);
+}
+
+.principal-conteudo{ max-width:50%; }
+
+.principal-conteudo h1{
+  font-size:2.4rem;
+  color:var(--primario);
+  margin-bottom:16px;
+}
+
+.principal-conteudo p{ margin-bottom:20px; color:var(--texto); }
+
+.botao-primario{
+  background:var(--primario);
+  color:#fff;
+  padding:12px 22px;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+/* placeholder imagem principal */
+.principal-imagem{
+  width:40%;
+  height:300px;
+  background:var(--borda);
+  border-radius:12px;
+}
+
+/* =========================================================
+   COMO FUNCIONA
+========================================================= */
+.como-funciona{ padding:60px 10%; text-align:center; background:var(--fundo); }
+
+.como-funciona h2{ color:var(--primario); margin-bottom:28px; }
+
+.passos{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+.passo{
+  max-width:300px;
+  background:var(--card);
+  padding:18px;
+  border-radius:8px;
+  border:1px solid var(--borda);
+}
+
+/* =========================================================
+   IMPACTO
+========================================================= */
+.impacto{ padding:60px 10%; text-align:center; }
+
+.cartoes-impacto{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+.cartao-impacto{
+  max-width:300px;
+  background:var(--card);
+  padding:18px;
+  border-radius:8px;
+  border:1px solid var(--borda);
+}
+
+/* =========================================================
+   PARCERIAS
+========================================================= */
+.parcerias{
+  padding:60px 10%;
+  text-align:center;
+  background:var(--card-alt);
+}
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+.cta-final{
+  padding:60px 10%;
+  text-align:center;
+  background:var(--primario);
+  color:#fff;
+}
+
+.cta-final .botao-primario{ 
+    background:#fff; color:var(--primario);
+ }
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+.rodape{
+  background:#111;
+  padding:28px 10%;
+  color:var(--texto);
+  text-align:center;
+}
+
+.links-rodape a{ color:var(--texto); text-decoration:none; margin:0 8px; }
+
+/* =========================================================
+   QUEM SOMOS (página)
+========================================================= */
+.quem-somos-cabecalho{
+  padding:64px 10%;
+  background:var(--primario);
+  color:#fff;
+  text-align:center;
+}
+
+.secao-missao, .secao-visao{
+  padding:56px 10%;
+  background:var(--fundo);
+}
+
+.container{ display:flex; gap:30px; align-items:center; }
+
+.container.invertido{ flex-direction:row-reverse; }
+
+.texto h2{ color:var(--primario); margin-bottom:10px; }
+
+.imagem-missao, .imagem-visao{ flex:1; height:240px; background:var(--borda); border-radius:10px; }
+
+/* =========================================================
+   VALORES / EQUIPE
+========================================================= */
+.grade-valores{ display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:20px; }
+
+.cartao-valor{ background:var(--card); padding:16px; border-radius:8px; border:1px solid var(--borda); }
+
+.grade-equipe{ display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:20px; }
+
+.cartao-membro{ background:var(--card); padding:16px; border-radius:8px; border:1px solid var(--borda); text-align:center; }
+
+.foto-membro{ height:140px; background:var(--borda); border-radius:8px; margin-bottom:12px; }
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+@media (max-width:900px){
+  .principal{ flex-direction:column; text-align:center; padding:48px 6%; }
+  .principal-imagem{ width:100%; height:220px; margin-top:20px; }
+  .passos, .cartoes-impacto, .grade-valores, .grade-equipe{ flex-direction:column; display:block; }
+  .container{ flex-direction:column; }
+  .links-navegacao{ gap:10px; }
+}
+
+/* FORMULÁRIO DE CONTATO */
+.secao-formulario {
+  padding: 60px 10%;
+  background: var(--bg-color);
+}
+
+.formulario-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--card-color);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.formulario-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contato label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--card-alt);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.formulario-contato button {
+  margin-top: 10px;
+  align-self: center;
+}
+
+/* ---------- ANIMAÇÕES PROFISSIONAIS ---------- */
+
+/* Estado inicial (antes de aparecer) */
+.animacao-entrada {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Quando estiver visível */
+.animacao-visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide suave da esquerda */
+.animacao-esquerda {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacao-esquerda.animacao-visivel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide suave da direita */
+.animacao-direita {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacao-direita.animacao-visivel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Leve zoom-in para cartões */
+.animacao-zoom {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacao-zoom.animacao-visivel {
+  opacity: 1;
+  transform: scale(1);
 }

@@ -1,38 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> 
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha de Personagem</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecobots – Robôs Sustentáveis para Gestão de Resíduos</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="ficha-container">
-
-        <header class="ficha-header">
-            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmF5emIweDRpcnpqbjIwaTQxaHl5eW9raXVweXIydHdzb3cyeDY3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I6wUi5eTdUCWI/giphy.gif">
-            <h1 class="personagem-nome">Sasuke Uchira</h1>
-            <h2 class="personagem-titulo">Caminho do Ninja</h2>
-        </header>
-
-        <section class="ficha-bio">
-            <p>Sasuke é conhcecido como um ninja da aldeia da folha pais do fogo aonde morava com seus pais e irmãos até uma grande trajedia acontecer e uma devatção em seu clã sobrando só ele de uchira sasuke tem bastante habilidaades com kunai shuriken possui uma gama de golpes que se destacam na obra incluido seu sharingan que além de copiar jutsus pode envocar uma armadura estraordinaria com defessa quase impenetrável chamada Sussano'O com habilidades e poderes do usuario adaptados em uma defesa poderosa cheia de poder Sasuke procura vingança pelo seu irmão e revolução em ser Hokage </p>
-        </section>
-
-        <section class="ficha-habilidades">
-            <h3>Habilidades do ninja</h3>
-            <ul>
-                <li>Estilo fogo jutsu bola de fogo🔥</li>
-                <li>Estilo Relampago chidori⚡</li>
-                <li>Chibaku Tensei 🌑</li>
-                <li>Estilo relampago Kirin🐉⚡</li>
-                <li>Susasno'O🩻🟪</li>
-                <li>Mangekyou Sharingan Eterno👁️🩸</li>
-            </ul>
-        </section>
-
+  <!-- BARRA DE NAVEGAÇÃO -->
+  <header class="barra-navegacao">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Ecobots" />
     </div>
 
+    <nav class="links-navegacao">
+      <a href="index.html">Início</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="solucoes.html">Soluções</a>
+      <a href="contato.html">Contato</a>
+      <button id="alternar-tema" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <!-- PRINCIPAL -->
+  <main class="principal">
+    <div class="principal-conteudo">
+      <h1>Robôs para transformar lixo em energia sustentável</h1>
+      <p>Tecnologia automatizada para coletar, separar e transformar resíduos em energia limpa e renovável.</p>
+      <a href="solucoes.html" class="botao-primario">Saiba como funciona</a>
+    </div>
+    <div class="principal-imagem" role="img" aria-label="Imagem representativa"></div>
+  </main>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona animacao-entrada">
+    <h2>Como funciona</h2>
+    <div class="passos">
+      <article class="passo">
+        <h3>1. Coleta com robôs</h3>
+        <p>Robôs inteligentes percorrem a comunidade para recolher resíduos seletivamente.</p>
+      </article>
+
+      <article class="passo">
+        <h3>2. Triagem automatizada</h3>
+        <p>Sistemas separam plásticos, metais e orgânicos de forma eficiente.</p>
+      </article>
+
+      <article class="passo">
+        <h3>3. Conversão em energia</h3>
+        <p>Os resíduos são processados para gerar energia limpa, como biogás ou queima controlada.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- IMPACTO -->
+  <section class="impacto">
+    <h2>Impacto social e ambiental</h2>
+    <div class="cartoes-impacto">
+      <div class="cartao-impacto">
+        <h3>Ambiental</h3>
+        <p>Redução de lixo em aterros e emissão de gases nocivos.</p>
+      </div>
+
+      <div class="cartao-impacto">
+        <h3>Social</h3>
+        <p>Geração de trabalho e capacitação em comunidades.</p>
+      </div>
+
+      <div class="cartao-impacto">
+        <h3>Energético</h3>
+        <p>Produção de energia renovável para escolas, praças e centros comunitários.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCERIAS -->
+  <section class="parcerias">
+    <h2>Parcerias e credibilidade</h2>
+    <p>Trabalhamos com ONGs, prefeituras, universidades e cooperativas para tornar este projeto realidade.</p>
+  </section>
+
+  <!-- CALL TO ACTION FINAL -->
+  <section class="cta-final">
+    <h2>Quer transformar sua comunidade?</h2>
+    <a href="contato.html" class="botao-primario">Entre em contato</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="links-rodape">
+      <a href="index.html">Início</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="solucoes.html">Soluções</a>
+      <a href="contato.html">Contato</a>
+    </div>
+    <p>© 2025 Ecobots. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
